@@ -21,3 +21,4 @@ function anagram(str1, str2) {
 
 console.log(anagram('finder', 'Friend')); // true
 console.log(anagram('hello', 'bye')); // false
+console.log(anagram('byehellobye', 'hellobyebyeeeeee')); 

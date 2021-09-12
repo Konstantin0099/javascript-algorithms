@@ -20,7 +20,6 @@ function palindrome(str) {
     let countdown = lengthString - 1 - i;
     if (string[i] !== string[countdown]) {
       return false;
-      break;
     }
   }
   return true;
@@ -28,11 +27,11 @@ function palindrome(str) {
 // Напишите код здесь
 
 // Протестируйте решение, вызывая функцию с разными аргументами:
-
+console.log(palindrome(""));
 console.log(palindrome("топот")); // должно быть true
 console.log(palindrome("Saippuakivikauppias")); // true
 console.log(palindrome("привет")); // false
-
+console.log(palindrome("Saippuakdsfgsdgdfsgdfhsgdhdhfhjklivikauppias"));
 /*
  * Бонус. Задача для любознательных. Пусть функция принимает на вход любую строку,
  * но пробелы и знаки препинания не учитывает. Например:
