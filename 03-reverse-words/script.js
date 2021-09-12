@@ -6,13 +6,19 @@
  * порядке.Если в строке есть знаки препинания, их можно удалить
  * или оставить — на ваше усмотрение.
  *
-*/
+ */
 
 function reverseWords(str) {
-    // Напишите код здесь
+  const arraystr = str.split(" ");
+  const newArraystr = arraystr.reduce((gatherer, word) => {
+    gatherer.unshift(word);
+    return gatherer;
+  }, []);
+  return newArraystr.join(" ");
+  // Напишите код здесь
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:
 
-console.log(reverseWords('всегда много путей достичь цель есть')); // "есть цель достичь путей много всегда"
-console.log(reverseWords('испробовать их все должны вы')); // "вы должны все их испробовать"
+console.log(reverseWords("всегда много путей достичь цель есть")); // "есть цель достичь путей много всегда"
+console.log(reverseWords("испробовать их все должны вы")); // "вы должны все их испробовать"

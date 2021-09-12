@@ -4,11 +4,17 @@
  * Напишите функцию uniq(arr), принимающую на вход массив целых чисел.
  * Функция должна возвращать массив уникальных чисел, которые содержатся
  * в переданном массиве. То есть, дубликаты должны быть удалены.
- * 
-*/
-
+ *
+ */
 function uniq(arr) {
-    // Напишите код здесь
+  const arrayUniqueNumbers = arr.reduce((gatherer, element) => {
+    if (!gatherer.includes(element)) {
+      gatherer.push(element);
+    }
+    return gatherer;
+  }, []);
+  return arrayUniqueNumbers;
+  // Напишите код здесь
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:
