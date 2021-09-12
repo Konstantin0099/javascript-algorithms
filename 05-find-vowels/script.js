@@ -14,26 +14,25 @@ function findVowels(str) {
   const lengthVowelLetters = vowelLetters.length;
   const lengthStr = string.length;
   let number = 0;
-  for (
-    indexStr = 0;
-    indexStr < lengthStr;
-     indexStr++
-  ) { 
+  for (indexStr = 0; indexStr < lengthStr; indexStr++) {
     for (
-        indexVowelLetters = 0;
-        indexVowelLetters < lengthVowelLetters;
-        indexVowelLetters++
-      ) {
+      indexVowelLetters = 0;
+      indexVowelLetters < lengthVowelLetters;
+      indexVowelLetters++
+    ) {
       if (string[indexStr] === vowelLetters[indexVowelLetters]) {
-        number++; break
+        number++;
+        break;
       }
     }
-}
-return number;
+  }
+  return number;
 }
 // Протестируйте решение, вызывая функцию с разными аргументами:
 
 console.log(findVowels("здравствуй")); // 2
 console.log(findVowels("привет")); // 2
 console.log(findVowels("хеллоу")); // 3
-console.log(findVowels("Протестируйте решение, вызывая функцию с разными аргументами"))
+console.log(
+  findVowels("Протестируйте решение, вызывая функцию с разными аргументами")
+);
