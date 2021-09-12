@@ -13,9 +13,18 @@
  * 
 */
 
-function palindrome(str) {
+    function palindrome(str) {
+        const string = str.toLowerCase();
+        const lengthString = string.length;
+        for (i = 0; i < ((lengthString - 1) / 2); i++) {   
+            let countdown = lengthString - 1 -i;
+        if (string[i] !== string[countdown]) { return false; break }
+        }
+       return true
+    
+    }
     // Напишите код здесь
-}
+
 
 // Протестируйте решение, вызывая функцию с разными аргументами:
 
